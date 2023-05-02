@@ -1,4 +1,4 @@
-defmodule Ueberauth.Strategy.Shift4Shop.OAuth do
+defmodule Shift4Shop.OAuth do
   use OAuth2.Strategy
 
   @defaults [
@@ -15,7 +15,7 @@ defmodule Ueberauth.Strategy.Shift4Shop.OAuth do
 
     opts = @defaults |> Keyword.merge(opts) |> Keyword.merge(client_id) |> resolve_values()
 
-    json_library = Ueberauth.json_library()
+    json_library = Shift4Shop.json_library()
 
     OAuth2.Client.new(opts)
     |> OAuth2.Client.put_serializer("application/json", json_library)
@@ -25,7 +25,7 @@ defmodule Ueberauth.Strategy.Shift4Shop.OAuth do
   Provides the authorize url for the request phase of Ueberauth. No need to call this usually.
   """
   def authorize_url!(params \\ [], opts \\ []) do
-    json_library = Ueberauth.json_library()
+    json_library = Shift4Shop.json_library()
 
     opts
     |> client
