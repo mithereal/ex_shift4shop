@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Crm.Message do
+defmodule Shift4Shop.Crm.Message do
   @derive Jason.Encoder
   defstruct MessageId: nil,
             DateCreated: "",

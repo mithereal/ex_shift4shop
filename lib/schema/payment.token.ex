@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Payment.Token do
+defmodule Shift4Shop.Payment.Token do
   @derive Jason.Encoder
   defstruct PaymentTokenID: nil,
             CustomerID: nil,

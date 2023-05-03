@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Frontend.Scripts do
+defmodule Shift4Shop.Frontend.Scripts do
   @derive Jason.Encoder
   defstruct FrontendScriptID: nil,
             Placement: "",

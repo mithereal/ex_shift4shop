@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Discount do
+defmodule Shift4Shop.Discount do
   @derive Jason.Encoder
   defstruct DiscountID: nil,
             DiscountPriceLevel: nil,

@@ -1,4 +1,4 @@
-defmodule Swift4Shop.GiftRegistry.Item do
+defmodule Shift4Shop.GiftRegistry.Item do
   @derive Jason.Encoder
   defstruct CatalogID: nil,
             SKU: "",

@@ -1,16 +1,16 @@
-defmodule Swift4shop do
+defmodule Shift4Shop do
   @moduledoc """
-  Documentation for `Swift4shop`.
+  Documentation for `Shift4Shop`.
   """
 
-  @secureurl Application.get_env(:swift4shop, :secureurl, "")
-  @privatekey Application.get_env(:swift4shop, :privkey, "")
+  @secureurl Application.compile_env(:shift4shop, :secureurl, "")
+  @privatekey Application.compile_env(:shift4shop, :privkey, "")
 
-  alias Swift4shop.OAuth
+  alias Shift4Shop.OAuth
 
   def json_library(otp_app \\ nil) do
-    environment = get_env([:swift4shop, otp_app])
-    Keyword.get(environment, :json_library, Application.get_env(:swift4shop, :json_library, Jason))
+    environment = get_env([:shift4shop, otp_app])
+    Keyword.get(environment, :json_library, Application.get_env(:shift4shop, :json_library, Jason))
   end
 
   defp get_env(value) do
@@ -74,7 +74,7 @@ defmodule Swift4shop do
 
   ## Examples
 
-      iex> Swift4shop.admin_permissions(token, opts)
+      iex> Shift4Shop.admin_permissions(token, opts)
       []
 
   """
@@ -95,7 +95,7 @@ defmodule Swift4shop do
 
   ## Examples
 
-      iex> Swift4shop.admin_permissions_by_id(token, id)
+      iex> Shift4Shop.admin_permissions_by_id(token, id)
       []
   """
 
@@ -138,7 +138,6 @@ defmodule Swift4shop do
   def fetch_customer_by_id(
         token,
         id,
-        data,
         headers \\ [SecureURL: @secureurl, PrivateKey: @privatekey],
         opts \\ []
       ) do
@@ -248,7 +247,6 @@ defmodule Swift4shop do
   def fetch_order_by_id(
         token,
         id,
-        data,
         headers \\ [SecureURL: @secureurl, PrivateKey: @privatekey],
         opts \\ []
       ) do
@@ -260,7 +258,6 @@ defmodule Swift4shop do
   def fetch_order_items(
         token,
         id,
-        data,
         headers \\ [SecureURL: @secureurl, PrivateKey: @privatekey],
         opts \\ []
       ) do
@@ -297,7 +294,6 @@ defmodule Swift4shop do
   def fetch_cart_by_id(
         token,
         id,
-        data,
         headers \\ [SecureURL: @secureurl, PrivateKey: @privatekey],
         opts \\ []
       ) do
@@ -313,7 +309,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Customers"
-    body = Swift4Shop.Customer.encode(data)
+    body = Shift4Shop.Customer.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -325,7 +321,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Customers/#{id}/CustomerAddressBooks"
-    body = Swift4Shop.Customer.encode(data)
+    body = Shift4Shop.Customer.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -336,7 +332,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Orders"
-    body = Swift4Shop.Order.encode(data)
+    body = Shift4Shop.Order.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -348,7 +344,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Order/#{id}/Items"
-    body = Swift4Shop.Order.Item.encode(data)
+    body = Shift4Shop.Order.Item.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -360,7 +356,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Order/#{id}/Questions"
-    body = Swift4Shop.Order.Item.encode(data)
+    body = Shift4Shop.Order.Item.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -372,7 +368,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Order/#{id}/SendGiftCardRecipientEmail"
-    body = Swift4Shop.Order.Item.encode(data)
+    body = Shift4Shop.Order.Item.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -384,7 +380,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Order/#{id}/Shipments"
-    body = Swift4Shop.Order.Item.encode(data)
+    body = Shift4Shop.Order.Item.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -396,7 +392,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Order/#{id}/Transactions"
-    body = Swift4Shop.Order.Item.encode(data)
+    body = Shift4Shop.Order.Item.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -407,7 +403,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Manufacturers"
-    body = Swift4Shop.Manufacturer.encode(data)
+    body = Shift4Shop.Manufacturer.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -418,7 +414,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/FrontendScripts"
-    body = Swift4Shop.FrontendScripts.encode(data)
+    body = Shift4Shop.FrontendScripts.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -429,7 +425,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Cart"
-    body = Swift4Shop.Cart.encode(data)
+    body = Shift4Shop.Cart.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -441,7 +437,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Cart#{id}/Item"
-    body = Swift4Shop.Items.encode(data)
+    body = Shift4Shop.Items.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -452,7 +448,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Categories"
-    body = Swift4Shop.Categories.encode(data)
+    body = Shift4Shop.Categories.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -463,7 +459,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Categories"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -474,7 +470,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products"
-    body = Swift4Shop.Product.encode(data)
+    body = Shift4Shop.Product.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -486,7 +482,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Options"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -498,7 +494,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/AdvancedOptions"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -511,7 +507,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Options/#{setid}/Option"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -523,7 +519,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Discount"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -535,7 +531,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Categories"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -547,7 +543,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Distributors"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -559,7 +555,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Eproducts"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -571,7 +567,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Features"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -583,7 +579,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Images"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -595,7 +591,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Related"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -607,7 +603,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Serials"
-    body = Swift4Shop.Options.encode(data)
+    body = Shift4Shop.Options.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -619,7 +615,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Products/#{id}/Upselling"
-    body = Swift4Shop.Products.encode(data)
+    body = Shift4Shop.Products.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 
@@ -630,7 +626,7 @@ defmodule Swift4shop do
         opts \\ []
       ) do
     path = "https://apirest.3dcart.com/3dCartWebAPI/v2/Distributors"
-    body = Swift4Shop.Distributors.encode(data)
+    body = Shift4Shop.Distributors.encode(data)
     OAuth.post(token, path, body, headers, opts)
   end
 end

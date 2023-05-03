@@ -1,8 +1,8 @@
-defmodule Swift4shopTest do
+defmodule Shift4ShopTest do
   use ExUnit.Case
-  doctest Swift4shop
+  doctest Shift4Shop
 
   test "greets the world" do
-    assert Swift4shop.hello() == :world
+    assert Shift4Shop.hello() == :world
   end
 end

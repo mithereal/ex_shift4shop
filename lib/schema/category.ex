@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Category do
+defmodule Shift4Shop.Category do
   @derive Jason.Encoder
   defstruct CategoryID: nil,
             CategoryName: "",

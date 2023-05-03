@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Category.ExternalId do
+defmodule Shift4Shop.Category.ExternalId do
   @derive Jason.Encoder
   defstruct ID: nil,
             CategoryID: nil,

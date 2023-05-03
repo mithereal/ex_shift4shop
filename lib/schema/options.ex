@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Options do
+defmodule Shift4Shop.Options do
   @derive Jason.Encoder
   defstruct OptionID: nil,
             OptionName: "",

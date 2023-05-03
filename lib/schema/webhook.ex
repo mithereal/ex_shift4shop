@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Webhook do
+defmodule Shift4Shop.Webhook do
   @derive Jason.Encoder
   defstruct Id: 1,
             Name: "sample string strCount",

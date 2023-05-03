@@ -1,12 +1,12 @@
-defmodule Swift4shop.MixProject do
+defmodule Shift4Shop.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/mithereal/ex_swift4shop.git"
+  @source_url "https://github.com/mithereal/ex_shift4shop.git"
   @version "2.0.0"
 
   def project do
     [
-      app: :swift4shop,
+      app: :shift4shop,
       version: @version,
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
@@ -16,7 +16,7 @@ defmodule Swift4shop.MixProject do
       description: description(),
       package: package(),
       docs: docs(),
-      name: "Swift4Shop",
+      name: "Shift4Shop",
       source_url: @source_url
     ]
   end
@@ -40,26 +40,26 @@ defmodule Swift4shop.MixProject do
 
 
   defp description() do
-    "A Swift4Shop Client for Elixir"
+    "A Shift4Shop Client for Elixir"
   end
 
   defp package() do
     [
       # This option is only needed when you don't want to use the OTP application name
-      name: "Swift4Shop",
+      name: "Shift4Shop",
       # These are the default files included in the package
       files: ~w(lib .formatter.exs mix.exs README* LICENSE*),
       licenses: ["Apache-2.0"],
-      links: %{"GitHub" => "https://github.com/mithereal/ex_swift4shop"}
+      links: %{"GitHub" => "https://github.com/mithereal/ex_shift4shop"}
     ]
   end
 
   defp docs() do
     [
       main: "readme",
-      name: "Swift4Shop",
+      name: "Shift4Shop",
       source_ref: "v#{@version}",
-      canonical: "http://hexdocs.pm/swift4shop",
+      canonical: "http://hexdocs.pm/shift4shop",
       source_url: @source_url,
       extras: ["README.md", "LICENSE"]
     ]

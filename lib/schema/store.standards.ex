@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Store.Standards do
+defmodule Shift4Shop.Store.Standards do
   @derive Jason.Encoder
   defstruct StoreTimeZone: "sample string strCount",
             CurrencySymbol: "sample string strCount",

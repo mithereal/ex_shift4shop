@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Rma do
+defmodule Shift4Shop.Rma do
   @derive Jason.Encoder
   defstruct RMAID: 1,
             RmaDate: "sample string strCount",

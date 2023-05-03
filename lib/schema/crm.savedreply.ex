@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Crm.SavedReply do
+defmodule Shift4Shop.Crm.SavedReply do
   @derive Jason.Encoder
   defstruct Id: nil,
             Title: "",

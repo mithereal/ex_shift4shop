@@ -1,4 +1,4 @@
-defmodule Swift4Shop.AdvancedOption do
+defmodule Shift4Shop.AdvancedOption do
   @derive Jason.Encoder
   defstruct AdvancedOptionCode: "",
             AdvancedOptionSufix: "",

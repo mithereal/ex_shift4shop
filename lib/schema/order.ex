@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Order do
+defmodule Shift4Shop.Order do
   @derive Jason.Encoder
   defstruct InvoiceNumberPrefix: nil,
             InvoiceNumber: nil,

@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Cart.Item do
+defmodule Shift4Shop.Cart.Item do
   @derive Jason.Encoder
   defstruct CatalogID: nil,
             CartItemID: nil,

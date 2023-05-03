@@ -1,4 +1,4 @@
-defmodule Swift4Shop.GiftRegistry do
+defmodule Shift4Shop.GiftRegistry do
   @derive Jason.Encoder
   defstruct CustomerAddressBook: "",
             GiftRegistryID: nil,

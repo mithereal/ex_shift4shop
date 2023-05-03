@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Store.Settings do
+defmodule Shift4Shop.Store.Settings do
   @derive Jason.Encoder
   defstruct StoreInformation: 1,
             MerchantInformation: 1,

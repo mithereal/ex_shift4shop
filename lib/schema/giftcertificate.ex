@@ -1,4 +1,4 @@
-defmodule Swift4Shop.GiftCertificate do
+defmodule Shift4Shop.GiftCertificate do
   @derive Jason.Encoder
   defstruct CertificateCode: "",
             Amount: nil,

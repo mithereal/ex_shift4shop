@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Admin.Post do
+defmodule Shift4Shop.Admin.Post do
   @derive Jason.Encoder
   defstruct AdminId: nil,
             Username: "",

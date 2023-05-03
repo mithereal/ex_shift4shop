@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Product do
+defmodule Shift4Shop.Product do
   @derive Jason.Encoder
   defstruct SKUInfo: nil,
             MFGID: nil,

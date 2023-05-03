@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Crm do
+defmodule Shift4Shop.Crm do
   @derive Jason.Encoder
   defstruct CrmID: nil,
             DateOpened: "",

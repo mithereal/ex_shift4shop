@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Promotion do
+defmodule Shift4Shop.Promotion do
   @derive Jason.Encoder
   defstruct PromotionID: nil,
             PromotionName: "",

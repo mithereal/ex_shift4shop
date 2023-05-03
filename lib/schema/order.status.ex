@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Order.Status do
+defmodule Shift4Shop.Order.Status do
   @derive Jason.Encoder
   defstruct   OrderStatusID: nil,
               Sorting: nil,

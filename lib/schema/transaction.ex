@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Transaction do
+defmodule Shift4Shop.Transaction do
   @derive Jason.Encoder
   defstruct TransactionIndexID: nil,
             OrderID: nil,

@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Shipment do
+defmodule Shift4Shop.Shipment do
   @derive Jason.Encoder
   defstruct ShipmentID: nil,
             ShipmentLastUpdate: "",

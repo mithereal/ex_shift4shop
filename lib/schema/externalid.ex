@@ -1,4 +1,4 @@
-defmodule Swift4Shop.ExternalId do
+defmodule Shift4Shop.ExternalId do
   @derive Jason.Encoder
   defstruct ID: nil,
             AdvancedOptionSufix: "",

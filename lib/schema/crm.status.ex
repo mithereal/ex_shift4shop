@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Crm.Status do
+defmodule Shift4Shop.Crm.Status do
   @derive Jason.Encoder
   defstruct Id: nil,
             StatusId: nil,

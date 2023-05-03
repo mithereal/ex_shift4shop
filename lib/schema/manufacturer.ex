@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Manufacturer do
+defmodule Shift4Shop.Manufacturer do
   @derive Jason.Encoder
   defstruct ManufacturerID: nil,
             ManufacturerName: "",

@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Customer.Group do
+defmodule Shift4Shop.Customer.Group do
   @derive Jason.Encoder
   defstruct CustomerGroupID: nil,
             Name: "",

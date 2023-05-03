@@ -25,8 +25,6 @@ defmodule Shift4Shop.OAuth do
   Provides the authorize url for the request phase of Ueberauth. No need to call this usually.
   """
   def authorize_url!(params \\ [], opts \\ []) do
-    json_library = Shift4Shop.json_library()
-
     opts
     |> client
     |> OAuth2.Client.authorize_url!(params)
@@ -45,7 +43,6 @@ defmodule Shift4Shop.OAuth do
 
     {_, token} =
       case client do
-
         {:error, %{body: %{"error" => description}, status_code: error}} ->
           {:error,
            %{
@@ -56,7 +53,7 @@ defmodule Shift4Shop.OAuth do
              ]
            }}
 
-          {:ok, %{token: token}} ->
+        {:ok, %{token: token}} ->
           {:ok, token}
 
         {:ok, %{body: %{token: token}}} ->
@@ -79,10 +76,11 @@ defmodule Shift4Shop.OAuth do
       raise OAuth2.Error, reason: "Missing required key `code` for `#{inspect(__MODULE__)}`"
     end
 
-    client = case client.postback_uri do
-      nil -> client
-      data -> put_param(client, :postback_uri, client.postback_uri)
-    end
+    client =
+      case client.postback_uri do
+        nil -> client
+        data -> put_param(client, :postback_uri, data)
+      end
 
     client
     |> put_header("Accept", "application/json")
@@ -103,5 +101,4 @@ defmodule Shift4Shop.OAuth do
 
   defp resolve_value({m, f, a}) when is_atom(m) and is_atom(f), do: apply(m, f, a)
   defp resolve_value(v), do: v
-
 end

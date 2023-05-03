@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Merchant.Information do
+defmodule Shift4Shop.Merchant.Information do
   @derive Jason.Encoder
   defstruct Company: "sample string strCount",
             Address1: "sample string strCount",

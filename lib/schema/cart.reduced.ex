@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Cart.Reduced do
+defmodule Shift4Shop.Cart.Reduced do
   @derive Jason.Encoder
   defstruct CustomerId: nil,
             BillingFirstName: "",

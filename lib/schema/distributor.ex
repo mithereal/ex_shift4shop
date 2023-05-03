@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Crm.Distributor do
+defmodule Shift4Shop.Crm.Distributor do
   @derive Jason.Encoder
   defstruct DistributorID: nil,
             CompanyName: "",

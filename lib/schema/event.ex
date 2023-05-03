@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Event do
+defmodule Shift4Shop.Event do
   @derive Jason.Encoder
   defstruct EventType: 1,
             EventName: "sample string strCount"

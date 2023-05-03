@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Question do
+defmodule Shift4Shop.Question do
   @derive Jason.Encoder
   defstruct QuestionAnswerIndexID: nil,
             OrderID: nil,

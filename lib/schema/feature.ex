@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Feature do
+defmodule Shift4Shop.Feature do
   @derive Jason.Encoder
   defstruct FeatureID: nil,
             FeatureTitle: "",

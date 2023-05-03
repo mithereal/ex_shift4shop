@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Cart do
+defmodule Shift4Shop.Cart do
   @derive Jason.Encoder
   defstruct OrderKey: "",
             OrderDate: "",

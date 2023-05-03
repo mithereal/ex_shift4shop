@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Customer do
+defmodule Shift4Shop.Customer do
   @derive Jason.Encoder
   defstruct CustomerID: nil,
             Email: nil,

@@ -1,4 +1,4 @@
-defmodule Swift4Shop.Rma.Item do
+defmodule Shift4Shop.Rma.Item do
   @derive Jason.Encoder
   defstruct CatalogID: 1,
             SKU: "sample string strCount",
