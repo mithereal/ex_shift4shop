@@ -4,6 +4,8 @@
 
 ## Installation
 
+Lets be honest you prolly dont want this, shift4shop is a piece of crap, if you absolutley must use this garbage here is an api to make it more livable, barely, the amount of undocumented fuckery going on in swift4shop is ridicoulous, this is just another example why you dont let fucking children be web developers. enjoi.
+
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `shift4shop` to your list of dependencies in `mix.exs`:
 
