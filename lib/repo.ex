@@ -1,23 +1,27 @@
 defmodule Shift4Shop.Repo do
   alias Shift4Shop.OAuth
 
-  def all(_) do
-    :ok
+  def all(url, token \\ "") do
+    OAuth.get!(token, url)
   end
 
-  def get!(url, token \\ "") do
+  def get(url, token \\ "") do
     OAuth.get(token, url)
   end
 
-  def insert(_) do
-    :ok
+  def get!(url, token \\ "") do
+    OAuth.get!(token, url)
   end
 
-  def update(_) do
-    :ok
+  def insert(url, token \\ "") do
+    OAuth.post(token, url)
   end
 
-  def delete(_) do
-    :ok
+  def update(url, token \\ "") do
+    OAuth.put(token, url)
+  end
+
+  def delete(url, token \\ "") do
+    OAuth.delete(token, url)
   end
 end
